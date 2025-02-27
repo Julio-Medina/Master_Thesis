@@ -2,4 +2,8 @@
 \BOOKMARK [1][-]{section.2}{Justificaci\363n}{}% 2
 \BOOKMARK [1][-]{section.3}{Objetivos}{}% 3
 \BOOKMARK [1][-]{section.4}{Marco Te\363rico}{}% 4
-\BOOKMARK [1][-]{section.5}{Metodolog\355a}{}% 5
+\BOOKMARK [2][-]{subsection.4.1}{Notaci\363n de Dirac}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{Representaci\363n de Qubit}{section.4}% 6
+\BOOKMARK [1][-]{section.5}{Mediciones}{}% 7
+\BOOKMARK [2][-]{subsection.5.1}{Regla de Born}{section.5}% 8
+\BOOKMARK [1][-]{section.6}{Metodolog\355a}{}% 9
