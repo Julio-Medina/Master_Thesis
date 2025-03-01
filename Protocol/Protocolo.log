@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.16)  27 FEB 2025 23:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.16)  28 FEB 2025 21:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -509,12 +509,7 @@ LaTeX Font Info:    Trying to load font information for U+bbold on input line 8
 LaTeX Warning: Reference `sec::PauliMatrix' on page 3 undefined on input line 1
 44.
 
-[3] [4]
-
-LaTeX Warning: Reference `eq::omega_definition' on page 5 undefined on input li
-ne 219.
-
-[5]
+[3] [4] [5]
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 237.
 
@@ -543,13 +538,6 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 241.
 
 Missing character: There is no ˆ in font cmr10!
 Missing character: There is no ˆ in font cmr10!
-
-LaTeX Warning: Reference `eq::QFT_general' on page 6 undefined on input line 26
-3.
-
-
-LaTeX Warning: Reference `eq::QFT' on page 6 undefined on input line 274.
-
 [6]
 Underfull \hbox (badness 10000) in paragraph at lines 289--290
 
@@ -582,28 +570,19 @@ LaTeX Info: Redefining \% on input line 25.
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 328.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 328.
+Package rerunfilecheck Info: File `Protocolo.out' has not changed.
+(rerunfilecheck)             Checksum: CAA6B78EBCA0CF9276CF71C37CFFB925;972.
 
-
-Package rerunfilecheck Warning: File `Protocolo.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Protocolo.out':
-(rerunfilecheck)             Before: 47E7505E1378973F91D5C0EC5700039C;510
-(rerunfilecheck)             After:  CAA6B78EBCA0CF9276CF71C37CFFB925;972.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 328.
  ) 
 Here is how much of TeX's memory you used:
- 9205 strings out of 481239
- 136163 string characters out of 5920377
- 426849 words of memory out of 5000000
- 24206 multiletter control sequences out of 15000+600000
+ 9210 strings out of 481239
+ 136263 string characters out of 5920377
+ 427230 words of memory out of 5000000
+ 24211 multiletter control sequences out of 15000+600000
  543224 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,11n,35p,766b,474s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -628,10 +607,10 @@ ype1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmtt10.pfb>
-Output written on Protocolo.pdf (8 pages, 264354 bytes).
+Output written on Protocolo.pdf (8 pages, 264849 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
- 233 compressed objects within 3 object streams
+ 286 PDF objects out of 1000 (max. 8388607)
+ 251 compressed objects within 3 object streams
  78 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
