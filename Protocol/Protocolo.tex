@@ -53,13 +53,13 @@ Maestría en Física\\
 \section{Introducción}
 Varias aplicaciones de la mecánica cuántica han tenido gran relevancia en el desarrollo científico y tecnológico de la sociedad moderna. La computación cuántica es una de esas aplicaciones con un gran potencial en diversos tipos de problemas que van desde la misma simulación de sistemas intrínsecamente cuánticos hasta simulaciones financieras y la resolución de problemas de optimización complejos. \\
 
-Los sistemas cuánticos proveen un paradigma de computo totalmente disruptivo en comparación a la computación clásica. Esto es posible gracias a dos propiedades fundamentales de los sistemas cuánticos, i.e. la superposición de estados y el \textbf{entrelazamiento de estados}. La unidad fundamental de la computación cuántica es el \textbf{qubit} que gracias a la superposición de estados y al entrelazamiento cuántico puede configurarse a sistemas de qubits entrelazados para que realicen operaciones en varios estados simultáneamente o en paralelo dando una ventaja o supremacía sobre la computación clásica. Un ejemplo bien conocido es el algoritmo de factorización de Shor.
+Los sistemas cuánticos proveen un paradigma de computo totalmente disruptivo en comparación a la computación clásica. Esto es posible gracias a dos propiedades fundamentales de los sistemas cuánticos, i.e. la superposición de estados y el \textbf{entrelazamiento de estados}. La unidad fundamental de la computación cuántica es el \textbf{qubit} que gracias a la superposición de estados y al entrelazamiento cuántico puede configurarse en sistemas de qubits entrelazados para que realicen operaciones en varios estados simultáneamente o en paralelo dando una ventaja o supremacía sobre la computación clásica. Un ejemplo bien conocido es el algoritmo de factorización de Shor\cite{Shor}.
 \section{Justificación}
 La motivación inicial para el desarrollo de dispositivos capaces de simular sistemas cuánticos viene de un artículo seminal de R. Feynman \cite{Feynman}, en donde expone cómo inevitablemente se tienen que recurrir a sistemas de naturaleza cuántica para poder hacer simulaciones de sistemas cuánticos ya que conforme aumenta el número de partículas en dichos sistemas la complejidad algorítmica crece exponencialmente, algo que hace el estudio pragmático de estos sistemas sea un gran reto tecnológico para sistemas clásicos, sobretodo cuando se trata de problemas de varios cuerpos.\\
 
 En esta investigación se quiere tener un entendimiento fundamental de los conceptos teóricos de la computación cuántica, además de complementarlo con aplicaciones de software específicamente utilizando las herramientas programáticas creadas por \textit{IBM, Qiskit}. Con esto se quiere realizar una simulación en una computadora cuántica real para revisar un resultado famoso que sirve para confirmar las desigualdades de Bell, i.e. las desigualdades CHSH.\\
 
-También se investigaran temas relacionados cómo el \textit{Quantum Machine Learning}, esto para poder entender cómo los ordenadores cuánticos pueden potenciar los ya exitosos sistema de Inteligencia Artificial. Tener un entendimiento fundamental de estas tecnologías es necesario para poder a empezar a buscar aplicaciones que puedan impulsar el desarrollo tecnológico.
+También se investigarán temas relacionados cómo el \textit{Quantum Machine Learning}, esto para poder entender cómo los ordenadores cuánticos pueden potenciar los ya exitosos sistemas de Inteligencia Artificial. Tener un entendimiento fundamental de estas tecnologías es necesario para poder a empezar a buscar aplicaciones que puedan impulsar el desarrollo tecnológico y científico.
 \section{Objetivos}
 \begin{enumerate}
 \item Comprender los principios básicos de la computación cuántica a través de una revisión detallada de mecánica cuántica avanzada.
@@ -191,6 +191,114 @@ P(-)=1
 \end{equation*}
 Como es de esperarse ya que $\bigg| \langle -|\psi\rangle\bigg|^2=\bigg| \langle -|-\rangle\bigg|^2=1$ y $\bigg| \langle +|-\rangle\bigg|^2=0$ por la propiedad de ortogonalidad de estas bases.
 
+
+\subsection{Principio de localidad de Einstein y la desigualdad de Bell}
+Varios físicos han tenido una inconformidad o han tenido otras interpretaciones con respecto a la interpretación ortodoxa antes expuesta. Probablemente el más famoso siendo Albert Einstein que siempre mostró e hizo explícita su inconformidad con varios aspectos de la teoría cuántica. El principio de localidad de Einstein es el siguiente: La situación real es que el comportamiento del sistema $S_2$ es independiente del sistema $S_1$ que esta espacialmente separado del primer sistema y por lo tanto no tiene una influencia directa. Este problema fue discutido por primera vez en un artículo seminal que se conoce como la paradoja EPR(Einstein, Podolsky y Rosen) ver \cite{Einstein}. Algunos han argumentado que las dificultades o incongruencias encontradas en este fenómeno son inherentes de las interpretaciones probabilísticas de la mecánica cuántica y que el comportamiento de la dinámica a nivel microscópico aparenta ser probabilístico debido a que se desconocen algunos parámetros por descubrir que se han llamado \textbf{variables ocultas}(\textit{hidden variables}) no han sido especificados. Hay varias propuestas teóricas alternativas a la interpretación ortodoxa de la mecánica cuántica basadas en variables ocultas u otras consideraciones, por ejemplo la teoría de onda piloto de Bohm, introducida por uno de los padres de la teoría cuántica, Louis de Broglie. La pregunta fundamental para establecer la validez de la teoría cuántica es, ¿las teorías alternativas hacen predicciones que difieren de las hechas por la mecánica cuántica?. Hasta 1964 se creía que las teorías alternativas podían manipularse de tal forma que sus predicciones siempre coincidían  con las predicciones cuánticas, el debate se podía considerar en ese sentido un tópico metafísico o filosófico, al final los resultados experimentales eran idénticos. No fue hasta que John. S. Bell dedujo que las teorías alternativas basadas en el principio de localidad de Einstein producían predicciones en la forma de una relación de desigualdad entre los observables de experimentos de correlaciones de spin que estaba en desacuerdo con las predicciones para el mismo experimento derivadas de la interpretación ortodoxa de la mecánica cuántica que además podía ser sometida a confirmación experimental.\\
+Aquí se derivan la relación de desigualdad de Bell en el marco de un modelo simple concebido inicialmente por Eugene Wigner, que incorpora todos los aspectos fundamentales de las teorías alternativas basadas en las variables ocultas. Los proponentes de este modelo aseguran que es imposible determinar $S_x$ y $S_y$ simultáneamente, i.e. son variables conjugadas. Sin embargo cuando se tiene un número grande de partículas con spin $\frac{1}{2}$ se asigna a cierta fracción de las partículas con la siguiente propiedad:
+\begin{enumerate}
+\item Si se mide $S_z$, se obtiene un valor positivo con certeza.
+\item Si se mide $S_x$, se obtiene un valor negativo con certeza.
+\end{enumerate}
+Se dice que una partícula que satisface esta propiedad pertenece al tipo $(\mathbf{\hat{z}}+,\, \mathbf{\hat{x}}-)$, hay que notar con está propiedad no se está aseverando que se pueda medir simultáneamente a $S_x$ y $S_z$ y medir $+$ y $-$ respectivamente. Cuando se mide $S_x$ no mide $S_z$ y viceversa. Se asignan valores definidos para componentes del spin en más de una dirección con la aclaración que sólo se mide un componente a la vez. Aunque este acercamiento es fundamentalmente distinto al de la mecánica cuántica, las predicciones cuánticas para las mediciones de $S_x$ y $S_x$ para el spin arriba $(S_z+)$pueden ser reproducidas dado que se tienen tantas partículas que pertenecen al tipo $(\mathbf{\hat{z}}+,\, \mathbf{\hat{x}}+)$ cómo al tipo $(\mathbf{\hat{z}}+,\, \mathbf{\hat{x}}-)$.\\
+Examinando cómo este modelo relativamente sencillo puede explicar las correlaciones en la mediciones hechas sobre sistemas compuestos por estados \textit{spin-singlets}, es claro que para un par en particular debe cumplirse o debe haber una correlación perfecta en la hay una coincidencia entre la partícula 1 y partícula 2 de tal manera que el momento angular del sistema es igual a cero: si la partícula 1 es del tipo $(\mathbf{\hat{z}}+,\, \mathbf{\hat{x}}-)$, entonces la partícula 2 es del tipo $(\mathbf{\hat{z}}-,\, \mathbf{\hat{x}}+)$, y de manera análoga en todos los otros casos(ver \cite{Sakurai}). Estos resultados de correlación pueden reproducirse si la partícula 1 y la partícula 2 coinciden de la siguiente manera:
+\begin{equation}
+\begin{aligned}
+\text{partícula 1}\,\,\,\,\,\,\text{partícula 1}\\
+(\mathbf{\hat{z}}+,\, \mathbf{\hat{x}}-) \leftrightarrow (\mathbf{\hat{z}}-,\, \mathbf{\hat{x}}+), 
+\end{aligned}
+\end{equation}
+\begin{equation}\label{eq::type_1_singlet_state}
+(\mathbf{\hat{z}}+,\, \mathbf{\hat{x}}+) \leftrightarrow (\mathbf{\hat{z}}-,\, \mathbf{\hat{x}}-),
+\end{equation}
+\begin{equation}
+(\mathbf{\hat{z}}-,\, \mathbf{\hat{x}}+) \leftrightarrow (\mathbf{\hat{z}}+,\, \mathbf{\hat{x}}-),
+\end{equation}
+\begin{equation}
+(\mathbf{\hat{z}}-,\, \mathbf{\hat{x}}-) \leftrightarrow (\mathbf{\hat{z}}+,\, \mathbf{\hat{x}}+),
+\end{equation}
+con proporciones iguales, $25\%$ cada una de las porciones de partículas. Se implica una suposición importante en este desarrollo, suponiendo que un par que pertenece al tipo \ref{eq::singlet_state} y el observador A decide hacer una medición del componente $S_z$ de la partícula 1, en este caso se obtiene un  valor positivo independientemente si el observador B decide medir $S_z$ o $S_x$. Es en este sentido en el que se incorpora el principio de localidad de Einstein en el modelo: el resultado de la medición de A está independientemente predeterminado de la elección que el observador B haga en su medición.\\
+En los ejemplos considerados previamente, se han reproducido exitosamente las predicciones de la mecánica cuántica. Considerando situaciones más elaboradas en las que el modelo hace predicciones que difieren de las hechas por la teoría de la mecánica cuántica. En este caso más complejo se tienen tres vectores unitarios $\mathbf{\hat{a}}$, $\mathbf{\hat{b}}$ y $\mathbf{\hat{c}}$, que en general no son mutuamente ortogonales. Se tiene el caso en que una de las partículas pertenece al un grupo definido, por ejemplo $(\mathbf{\hat{a}}-,\, \mathbf{\hat{b}}+,\,\mathbf{\hat{c}}+)$, que significa que si se mide $\mathbf{S}\cdot \mathbf{\hat{a}}$, se obtiene un medición negativa con certeza; si se mide $\mathbf{S}\cdot \mathbf{\hat{b}}$ se obtiene una medición positiva con certeza y finalmente si se mide $\mathbf{S}\cdot \mathbf{\hat{c}}$ también se obtiene una medición positiva. De manera análoga que el caso en el que sólo se tiene dos direcciones en este caso debe de haber una coincidencia perfecta con la otra partícula, por conservación de momento angular del sistema, es decir que la partícula 2 es del tipo $(\mathbf{\hat{a}}+,\, \mathbf{\hat{b}}-,\,\mathbf{\hat{c}}-)$. En un caso aleatorio cualquiera el par de partículas debe de pertenecer a uno de los ocho tipos que se detallan en la tabla \ref{tab:three_direction_correlations}. Estas ocho posibilidades son mutuamente excluyentes y disjuntas\footnote{Conjuntos sin elementos en común.}. El número de partículas de cada tipo se especifica en la primera columna de la tabla. Para ilustrar cómo se calculan las probabilidades en este experimento se supone que el observador A hace una medición de $\mathbf{S_1}\cdot \mathbf{\hat{a}}$ y obtiene un valor positivo y el observador B hace una medición $\mathbb{S_2}\cdot \mathbf{\hat{b}}$ también positiva entonces es claro que de la tabla \ref{tab:three_direction_correlations} que el par de partículas sólo tiene puede pertenecer a dos grupos, el grupo 3 o el grupo 4 por lo que el número total de pares de partículas es $N_3 + N_4$. Debido a que $N_i\geq 0$, se tienen relaciones de desigualdad del tipo:
+\begin{equation}\label{eq::positivity_condition}
+N_3 + N_4 \geq (N_2 +  N_4) + (N_3 +  N_7)
+\end{equation} 
+Si $P(\mathbf{\hat{a}}+;\,\mathbf{\hat{b}}+)$ es la probabilidad que, en una selección aleatoria el observador A mida $\mathbf{S}\cdot \mathbf{\hat{a}}$ y obtenga $+$ y el observador B mida $\mathbf{S}\cdot \mathbf{\hat{b}}$ y obtenga $+$, y así de manera análoga para todas las otras combinaciones de posibilidades.	
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\toprule
+\textbf{Grupo} & \textbf{Partícula 1} & \textbf{Partícula 1} \\
+\midrule
+$N_1$ & $(\mathbf{\hat{a}}+,\, \mathbf{\hat{b}}+,\,\mathbf{\hat{c}}+)$ & $(\mathbf{\hat{a}}-,\, \mathbf{\hat{b}}-,\,\mathbf{\hat{c}}-)$\\
+$N_2$ & $(\mathbf{\hat{a}}+,\, \mathbf{\hat{b}}+,\,\mathbf{\hat{c}}-)$ & $(\mathbf{\hat{a}}-,\, \mathbf{\hat{b}}-,\,\mathbf{\hat{c}}+)$\\
+$N_3$ & $(\mathbf{\hat{a}}+,\, \mathbf{\hat{b}}-,\,\mathbf{\hat{c}}+)$ & $(\mathbf{\hat{a}}-,\, \mathbf{\hat{b}}+,\,\mathbf{\hat{c}}-)$\\
+$N_4$ & $(\mathbf{\hat{a}}+,\, \mathbf{\hat{b}}-,\,\mathbf{\hat{c}}-)$ & $(\mathbf{\hat{a}}-,\, \mathbf{\hat{b}}+,\,\mathbf{\hat{c}}+)$\\
+$N_5$ & $(\mathbf{\hat{a}}-,\, \mathbf{\hat{b}}+,\,\mathbf{\hat{c}}+)$ & $(\mathbf{\hat{a}}+,\, \mathbf{\hat{b}}-,\,\mathbf{\hat{c}}-)$\\
+$N_6$ & $(\mathbf{\hat{a}}-,\, \mathbf{\hat{b}}+,\,\mathbf{\hat{c}}-)$ & $(\mathbf{\hat{a}}+,\, \mathbf{\hat{b}}-,\,\mathbf{\hat{c}}+)$\\
+$N_7$ & $(\mathbf{\hat{a}}-,\, \mathbf{\hat{b}}-,\,\mathbf{\hat{c}}+)$ & $(\mathbf{\hat{a}}+,\, \mathbf{\hat{b}}+,\,\mathbf{\hat{c}}-)$\\
+$N_8$ & $(\mathbf{\hat{a}}-,\, \mathbf{\hat{b}}-,\,\mathbf{\hat{c}}-)$ & $(\mathbf{\hat{a}}+,\, \mathbf{\hat{b}}+,\,\mathbf{\hat{c}}+)$\\
+\bottomrule
+\hline
+\end{tabular}
+    \label{tab:three_direction_correlations}
+\end{table}
+La probabilidad está dada por 
+\begin{equation}
+P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+) = \frac{N_3+N_4}{\sum_{i=1}^{8} N_i} 
+\end{equation}
+De manera análoga se tiene que 
+\begin{equation}
+P(\mathbf{\hat{a}}+;\, \mathbf{\hat{c}},+) = \frac{N_2+N_4}{\sum_{i=1}^{8} N_i} 
+\end{equation}
+y
+\begin{equation}
+P(\mathbf{\hat{c}}+;\, \mathbf{\hat{b}},+) = \frac{N_3+N_7}{\sum_{i=1}^{8} N_i} 
+\end{equation}
+la condición de positividad del número de poblaciones en cada tipo \ref{eq::positivity_condition} da cómo resultado
+\begin{equation}\label{eq::Bell_inequality}
+P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+) \geq P(\mathbf{\hat{a}}+;\, \mathbf{\hat{c}},+) + P(\mathbf{\hat{c}}+;\, \mathbf{\hat{b}},+)  
+\end{equation}
+Está es la \textbf{desigualdad de Bell}, que es una consecuencia del principio de localidad de Einstein.
+
+\subsection{Desigualdad de Bell y Mecánica Cuántica}
+En el punto de vista de la Mecánica Cuántica no se habla de una fracción de pares de partículas por ejemplo $\frac{N_3}{\sum_{i=1}^{8} N_i}$ pertenecientes al tipo 3, en lugar de esto se caracteriza todos los sistemas de \textit{spin-singlet} por el mismo ket \ref{eq::singlet_state}, en este sentido se tiene un ensamble puro(ver Sakurai \cite{Sakurai}). Usando el ket \ref{eq::singlet_state} y las reglas de la mecánica cuántica se pueden calcular las probabilidades de la desigualdad de Bell \ref{eq::Bell_inequality} sin ninguna ambigüedad.\\
+
+Primero se evalúa $P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+)$. Suponiendo que el observador A mide $\mathbf{\hat{S}} \cdot \mathbf{\hat{a}}$ y haya un valor $+$; debido a la correlación perfecta por la conservación del momento angular discutida previamente, la medición del observador B para $\mathbf{\hat{S}} \cdot \mathbf{\hat{b}}$ va a resultar en $-$ con certeza. Pero para calcular $P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+)$ se debe considerar un nuevo eje de cuantización para $\mathbf{\hat{b}}$ con un ángulo $\theta_{ab}$ con respecto a $\mathbf{\hat{a}}$, ver figura \ref{fig::P_evaluation}. 
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.24]{./evaluation_P.png} 
+\end{center} 
+\caption{Evaluación de $P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+)$}
+\label{fig::P_evaluation}
+\end{figure}
+De acuerdo al formalismo de la formulación matricial de la mecánica cuántica(ver \cite{Sakurai}), la probabilidad que la medición de $\mathbf{S}_2\cdot \mathbf{\hat{b}}$ de como resultado $+$ cuando se sabe que la partícula 2 es un estado propio(\textit{eigenvalue}) de $\mathbf{S}_2\cdot \mathbf{\hat{a}}$ con valor propio negativo está dado por
+\begin{equation}
+\cos^2\Bigg[\frac{\pi-\theta_{ab}}{2}\Bigg]=\sin^2\bigg(\frac{\theta_{ab}}{2}\bigg)
+\end{equation}
+Cómo resultado se obtiene que 
+\begin{equation}\label{eq::P_ab_probability}
+P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+)=\frac{1}{2}\sin^2\bigg(\frac{\theta_{ab}}{2}\bigg)
+\end{equation}
+donde el factor $\frac{1}{2}$ surge de la probabilidad inicial de obtener $\mathbf{S}_1\cdot \mathbf{\hat{a}}$ con valor $+$. Usando la expresión \ref{eq::P_ab_probability} y su generalización para los otros 2 términos de \ref{eq::Bell_inequality} se puede reescribir la desigualdad de Bell cómo:
+\begin{equation}\label{eq::Bell_inequality_2}
+\sin^2\bigg(\frac{\theta_{ab}}{2}\bigg)\leq \sin^2\bigg(\frac{\theta_{ac}}{2}\bigg)+\sin^2\bigg(\frac{\theta_{cb}}{2}\bigg)
+\end{equation}
+
+Con este resultado se puede demostrar que la desigualdad \ref{eq::Bell_inequality_2} no siempre se cumple desde un acercamiento geométrico. Por simplicidad se escoge a $\mathbf{\hat{a}}$, $\mathbf{\hat{b}}$ y $\mathbf{\hat{c}}$ a estar en un plano, y se escoge a $\mathbf{\hat{c}}$ de tal manera que bisecte las direcciones definidas por $\mathbf{\hat{a}}$ y $\mathbf{\hat{b}}$, con estas simplificaciones se obtiene:
+\begin{equation}
+\theta_{ab}=2\theta,\,\,\,\,\,\,\,\,\, \theta_{ac}=\theta_{cb}=\theta
+\end{equation}
+La desigualdad \ref{eq::Bell_inequality_2} es violada para
+\begin{equation}
+0<\theta<\frac{\pi}{2}
+\end{equation}
+Por ejemplo, si se toma $\theta=\frac{\pi}{4}$ se obtiene la contradicción
+\begin{equation}
+0.500\leq 0.292
+\end{equation}
+Con esto se puede evidenciar claramente que las predicciones de la mecánica cuántica no son compatibles con la desigualdad de Bell. Hay un observable real(en el sentido que puede verificarse experimentalmente) que difiere entre las predicciones cuánticas y la teoría alternativa que satisface el principio de localidad de Einstein.
+
+
 \subsection{Transformada Cuántica de Fourier}
 \subsubsection{Introducción}
 Como se mencionó antes la transformada de Fourier tienen mucha aplicaciones en toda la física y también tiene aplicaciones importantes en la computación clásica en áreas como el procesamiento de señales, algoritmos de compresión de datos y teoría de complejidad de algoritmos. La transformada de Fourier Cuántica es la implementación cuántica de la transformada discreta de Fourier sobre las amplitudes de una función de onda\footnote{Una función de onda que evoluciona de acuerdo a la ecuación de Schr\"{o}dinger}, es una parte fundamental de varios algoritmos cuánticos  como el algoritmo de factorización de Shor y la estimación de fase cuántica.\\
@@ -305,24 +413,34 @@ Los resultados teóricos se desarrollan desde principios fundamentales y se deja
 
 \bibitem{Einstein} Einstein A., B. Podolsky, N. Rosen, \textit{Can Quantum-Mechanical Description of Physical Reality be Considered Complete?}. Physical Review. \url{doi:10.1103/PhysRev.47.777}
 
-\bibitem{Medina} Julio Medina. \textit{Reporte de Seminario 1. Computación Cuántica}. \url{https://github.com/Julio-Medina/Seminario/blob/main/Reporte_final/reporte_final.pdf}
-
-\bibitem{Nielsen} Michael A. Nielsen, Isaac L. Chuang. \textit{Quantum Computation adn Quantum Information}. Cambridge University Press 2010. 10th. Anniversary Edition.
-
 \bibitem{Feynman} Richard P. Feynman. \textit{Simulating Physics with Computers.} \url{https://doi.org/10.1007/BF02650179}.
 
-\bibitem{Qiskit} \textit{Qiskit Textbook}. \url{https://qiskit.org/textbook-beta}
+\bibitem{Medina} Julio Medina. \textit{Reporte de Seminario 1. Computación Cuántica}. \url{https://github.com/Julio-Medina/Seminario/blob/main/Reporte_final/reporte_final.pdf}
 
 \bibitem{Mermin} N. David Mermin \textit{Quantum Computer Science: An Introduction}. Cambridge University Press, 2007.
 
-\bibitem{Sakurai} J.J. Sakurai \textit{Modern Quantum Mechanics}. The Benjamin/Cummings Publishing Company, 1985.
+\bibitem{Nielsen} Michael A. Nielsen, Isaac L. Chuang. \textit{Quantum Computation adn Quantum Information}. Cambridge University Press 2010. 10th. Anniversary Edition.
 
-\bibitem{Dotsenko} Viktor Dotsenko. \textit{An Introduction to the Theory of Spin Glasses and Neural Networks}. World Scientific 1994.
-
-\bibitem{Bahri} Yasaman Bahri, Jonathan Kadmon, Jeffrey Pennington, Sam S. Schoenholz, Jascha Sohl-Dickstein, Surya Ganguli. \textit{Statistical Mechanics of Deep Learning}. \url{https://www.annualreviews.org/doi/pdf/10.1146/annurev-conmatphys-031119-050745}
 
 \bibitem{openQASM} OpenQASM. \url{https://github.com/openqasm/openqasm}.
+
+\bibitem{Qiskit} \textit{Qiskit Textbook}. \url{https://qiskit.org/textbook-beta}
+
+
+\bibitem{Sakurai} J.J. Sakurai \textit{Modern Quantum Mechanics}. The Benjamin/Cummings Publishing Company, 1985.
+
+\bibitem{Shor} Peter W. Shor, \textit{Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer}. \url{https://arxiv.org/pdf/quant-ph/9508027}
+
+
+%\bibitem{Dotsenko} Viktor Dotsenko. \textit{An Introduction to the Theory of Spin Glasses and Neural Networks}. World Scientific 1994.
+
+%\bibitem{Bahri} Yasaman Bahri, Jonathan Kadmon, Jeffrey Pennington, Sam S. Schoenholz, Jascha Sohl-Dickstein, Surya Ganguli. \textit{Statistical Mechanics of Deep Learning}. \url{https://www.annualreviews.org/doi/pdf/10.1146/annurev-conmatphys-031119-050745}
+
+
  
+
+
+\bibitem{Qiskit} \textit{Qiskit Textbook}. \url{https://qiskit.org/textbook-beta}
 
 \end{thebibliography}
 \end{document}
