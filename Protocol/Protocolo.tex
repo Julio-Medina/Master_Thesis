@@ -125,13 +125,13 @@ El ketbra o producto abierto se define como
 	\end{pmatrix}.
 \end{equation}
 \subsection{Representación de Qubit}
-La representación de un qubit viene dada naturalmente por los spinores utilizados para describir el experimento de Stern-Gerlach en el que se miden el spin de átomos de plata. Estos spinores se definen como 
+La representación de un qubit viene dada naturalmente por los espinores utilizados para describir el experimento de Stern-Gerlach en el que se mide el espín de átomos de plata. Estos espinores se definen como 
 \begin{equation}\label{eq::qubit0}
 |0\rangle\equiv
 \begin{pmatrix}
 		1\\
 		0
-	\end{pmatrix}
+	\end{pmatrix},
 \end{equation}
 como el análogo cuántico del estado $0$ para un bit clásico, y para el estado clásico $1$ se usa
 \begin{equation}\label{eq::qubit1}
@@ -139,15 +139,15 @@ como el análogo cuántico del estado $0$ para un bit clásico, y para el estado
 \begin{pmatrix}
 		0\\
 		1
-	\end{pmatrix}
+	\end{pmatrix},
 \end{equation}
 estos estados cuánticos son evidentemente ortonormales $\langle 0 | 1\rangle=0$ y $\langle 0 | 0\rangle=\langle 1 | 1\rangle=1$. Se nota que estos dos estados forman una base. Todos los estados cuánticos están normalizados
 \begin{equation}
-\langle \psi | \psi\rangle=1
+\langle \psi | \psi\rangle=1,
 \end{equation}
 por ejemplo $|\psi\rangle=\frac{1}{\sqrt{2}}(|0\rangle+|1\rangle)$.
 \subsection{Mediciones}
-Por lo general se utilizan bases ortonormales para describir y medir estados cuánticos, aquí se sigue esa convención. Durante una medición en la base $\{|0\rangle, |1\rangle\}$ el estado colapsara ya sea a $|0\rangle$ o $|1\rangle$, estos son los eigen-estados de $\sigma_z$ la matriz Pauli-z(ver \ref{sec::PauliMatrix}) a esto se le conoce como medición en z.\\
+Por lo general se utilizan bases ortonormales para describir y medir estados cuánticos, aquí se sigue esa convención. Durante una medición en la base $\{|0\rangle, |1\rangle\}$ el estado colapsará ya sea a $|0\rangle$ o $|1\rangle$, estos son los eigen-estados de $\sigma_z$ la matriz Pauli-z(ver \ref{sec::PauliMatrix}) a esto se le conoce como medición en z.\\
 Hay infinitas bases distintas en las que se pueden realizar las mediciones pero otras bases comunes son $\{|+\rangle, |-\rangle \}$ definidas como:
 \begin{equation}
 |+\rangle\equiv\frac{1}{\sqrt{2}}(|0\rangle+|1\rangle)
