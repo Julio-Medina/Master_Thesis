@@ -6,13 +6,14 @@
 \BOOKMARK [1][-]{section.4}{Marco Te\363rico}{}% 6
 \BOOKMARK [2][-]{subsection.4.1}{Notaci\363n de Dirac}{section.4}% 7
 \BOOKMARK [2][-]{subsection.4.2}{Representaci\363n de Qubit}{section.4}% 8
-\BOOKMARK [2][-]{subsection.4.3}{Mediciones}{section.4}% 9
-\BOOKMARK [2][-]{subsection.4.4}{Regla de Born}{section.4}% 10
-\BOOKMARK [2][-]{subsection.4.5}{Principio de localidad de Einstein y la desigualdad de Bell}{section.4}% 11
-\BOOKMARK [2][-]{subsection.4.6}{Desigualdad de Bell y Mec\341nica Cu\341ntica}{section.4}% 12
-\BOOKMARK [2][-]{subsection.4.7}{Transformada Cu\341ntica de Fourier}{section.4}% 13
-\BOOKMARK [3][-]{subsubsection.4.7.1}{Introducci\363n}{subsection.4.7}% 14
-\BOOKMARK [3][-]{subsubsection.4.7.2}{Intuici\363n detr\341s de la TCF\(QFT\)}{subsection.4.7}% 15
-\BOOKMARK [3][-]{subsubsection.4.7.3}{Ejemplo 1: TCF de 1-qubit}{subsection.4.7}% 16
-\BOOKMARK [3][-]{subsubsection.4.7.4}{Transformada Cu\341ntica de Fourier: definici\363n general}{subsection.4.7}% 17
-\BOOKMARK [1][-]{section.5}{Metodolog\355a}{}% 18
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Matrices de Pauli}{subsection.4.2}% 9
+\BOOKMARK [2][-]{subsection.4.3}{Mediciones}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.4}{Regla de Born}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.5}{Principio de localidad de Einstein y la desigualdad de Bell}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.6}{Desigualdad de Bell y Mec\341nica Cu\341ntica}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.7}{Transformada Cu\341ntica de Fourier}{section.4}% 14
+\BOOKMARK [3][-]{subsubsection.4.7.1}{Introducci\363n}{subsection.4.7}% 15
+\BOOKMARK [3][-]{subsubsection.4.7.2}{Intuici\363n detr\341s de la TCF\(QFT\)}{subsection.4.7}% 16
+\BOOKMARK [3][-]{subsubsection.4.7.3}{Ejemplo 1: TCF de 1-qubit}{subsection.4.7}% 17
+\BOOKMARK [3][-]{subsubsection.4.7.4}{Transformada Cu\341ntica de Fourier: definici\363n general}{subsection.4.7}% 18
+\BOOKMARK [1][-]{section.5}{Metodolog\355a}{}% 19

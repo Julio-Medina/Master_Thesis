@@ -146,8 +146,81 @@ estos estados cuánticos son evidentemente ortonormales $\langle 0 | 1\rangle=0$
 \langle \psi | \psi\rangle=1,
 \end{equation}
 por ejemplo $|\psi\rangle=\frac{1}{\sqrt{2}}(|0\rangle+|1\rangle)$.
+
+\subsubsection{Matrices de Pauli}\label{sec::PauliMatrix}
+La matriz de Pauli x, $\sigma_x$ esta definida como 
+\begin{equation}
+\sigma_x=\begin{pmatrix}
+		0 &1 \\
+		1 &0
+	\end{pmatrix}=|0\rangle\langle 1|+|1\rangle\langle 0|,
+\end{equation}
+esta matriz sirve como el análogo cuántico de la compuerta NOT, para ver esto basta con operar con la representación de los qubits definida en \ref{eq::qubit0} y \ref{eq::qubit1}:
+\begin{equation}
+\sigma_x|0\rangle=
+	\begin{pmatrix}
+		0 &1 \\
+		1 &0
+	\end{pmatrix}
+	\begin{pmatrix}
+		1 \\
+		0
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 \\
+		1
+	\end{pmatrix}=|1\rangle .
+\end{equation}
+De igual manera usando la notación de Dirac se tiene que
+\begin{equation}
+\sigma_x|1\rangle=(|0\rangle\langle 1|+|1\rangle\langle 0|)|1\rangle=|0\rangle ,
+\end{equation}
+este comportamiento también se conoce como un bit-flip(intercambio de bit), también se puede actuar en superposiciones, los eigen-vectores de $\sigma_x$ son los kets $|+\rangle, |-\rangle$.\\
+La matriz de Pauli z, $\sigma_z$ está definida como 
+\begin{equation}
+\sigma_z=
+	\begin{pmatrix}
+		1 &0 \\
+		0 &-1
+	\end{pmatrix}=|0\rangle\langle 0|-|1\rangle\langle 1| ,
+\end{equation}
+el comportamiento de esta matriz se describe como un intercambio de fase(phase-flip), para visualizar esto, se opera  sobre la base $\{|+\rangle, |-\rangle\}$ con el siguiente ejemplo:
+\begin{equation*}
+\sigma_z|+\rangle=
+	\begin{pmatrix}
+		1 &0 \\
+		0 &-1
+	\end{pmatrix}\frac{1}{\sqrt{2}}
+	\begin{pmatrix}
+		1 \\
+		1
+	\end{pmatrix}=\frac{1}{\sqrt{2}}
+	\begin{pmatrix}
+		1 \\
+		-1
+	\end{pmatrix}=|-\rangle ,
+\end{equation*}
+en notación de Dirac se tiene
+\begin{equation}
+\sigma_z|-\rangle=(|0\rangle\langle 0|-|1\rangle\langle 1|)\frac{1}{\sqrt{2}}(|0\rangle-|1\rangle)=\frac{1}{\sqrt{2}}(|0\rangle+|1\rangle)=|+\rangle .
+\end{equation}
+Los eigen-vectores de la matriz $\sigma_z$ son los kets $|0\rangle, |1\rangle$.\\
+La matriz Pauli y, $\sigma_y$ está definida por
+\begin{equation}
+\sigma_y=
+	\begin{pmatrix}
+		0 &-i \\
+		i & 0
+	\end{pmatrix}=i|1\rangle\langle 0|-i|0\rangle\langle 1|.
+\end{equation}
+Se hace la observación que $\sigma_y=i \sigma_x\sigma_z$ por lo que se puede interpretar a esta compuerta como una sucesión de bit flip y phase flip. \\
+Cualquiera de las matrices de Pauli $\sigma_x, \sigma_y, \sigma_z$ cumple con 
+\begin{equation}
+\sigma_i^2=\mathbb{1}
+\end{equation}
+El conjunto de las matrices de Pauli y la matriz identidad forman una base de matrices de $2\times2$.
 \subsection{Mediciones}
-Por lo general se utilizan bases ortonormales para describir y medir estados cuánticos, aquí se sigue esa convención. Durante una medición en la base $\{|0\rangle, |1\rangle\}$ el estado colapsará ya sea a $|0\rangle$ o $|1\rangle$, estos son los eigen-estados de $\sigma_z$ la matriz Pauli-z(ver \ref{sec::PauliMatrix}) a esto se le conoce como medición en z.\\
+Por lo general se utilizan bases ortonormales para describir y medir estados cuánticos, aquí se sigue esa convención. Durante una medición en la base $\{|0\rangle, |1\rangle\}$ el estado colapsará ya sea a $|0\rangle$ o $|1\rangle$, estos son los eigen-estados de $\sigma_z$ la matriz Pauli-z(ver \ref{sec::PauliMatrix}) a esto se le conoce como medición en $z$.\\
 Hay infinitas bases distintas en las que se pueden realizar las mediciones pero otras bases comunes son $\{|+\rangle, |-\rangle \}$ definidas como:
 \begin{equation}
 |+\rangle\equiv\frac{1}{\sqrt{2}}(|0\rangle+|1\rangle)
