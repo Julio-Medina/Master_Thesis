@@ -77,7 +77,7 @@ Entender el estado actual de la computación cuántica para evaluar su estudio p
 
 \end{enumerate}
 \section{Marco Teórico}
-El marco teórico se basa en los fundamentos de mecánica cuántica necesarios para poder entender los desarrollos teóricos en computación cuántica y también para el estudio detallado del teorema de Bell\cite{Bell}. También se indagará en los conceptos de \textit{Quantum Machine Learning}, algunos de estos tópicos fueron estudiados en los seminarios 1,2 y 3. Algunos temas importantes se incluyen en este protocolo:
+El marco teórico se basa en los fundamentos de mecánica cuántica necesarios para poder entender los desarrollos teóricos en computación cuántica y también para el estudio detallado del teorema de Bell\cite{Bell}. También se indagará en los conceptos de \textit{Quantum Machine Learning}, algunos de estos tópicos fueron estudiados en los cursos de seminarios 1,2 y 3. Algunos temas importantes se incluyen en este protocolo:
 \subsection{Notación de Dirac}
 Se utilizan para describir estados cuánticos. Son vectores en el espacio de Hilbert, pueden ser vectores con dimensiones finitas o describir cantidades continuas y ser vectores de dimensión infinita. El físico inglés Paul Dirac popularizó la llamada notación de Dirac para hacer los cálculos en mecánica cuántica mas compactos.
 Se define al ket como
@@ -86,19 +86,19 @@ Se define al ket como
 	\begin{pmatrix}
 		a_1\\
 		a_2
-	\end{pmatrix}
+	\end{pmatrix},
 \end{equation}
 donde $a_1, a_2 \in \mathbb{C} $. Y el bra se define como el vector fila, o vector en el espacio dual del ket definido como 
 \begin{equation}
 \langle a|=
 	\begin{pmatrix}
-		a_1^*&a_2^*
+		a_1^*&a_2^* ,
 	\end{pmatrix}
 \end{equation}
-donde $a_1^*, a_2^* \in \mathbb{C} $ son los complejos conjugados de $a_1, a_2$.
+donde $a_1^*, a_2^* \in \mathbb{C} $ son los complejos conjugados de $a_1, a_2$, donde $a_1=x+iy$ y $a_1^*=x-iy$ es el complejo conjugado.
 Los bra y los ket están relacionados de la siguiente manera
 \begin{equation}
-\langle a|=|a\rangle^\dagger
+\langle a|=|a\rangle^\dagger ,
 \end{equation}
 que equivale a 
 \begin{equation}
@@ -108,21 +108,21 @@ que equivale a
 	\end{pmatrix}^\dagger=
 	\begin{pmatrix}
 		a_1^*&a_2^*
-	\end{pmatrix}
+	\end{pmatrix},
 \end{equation}
-donde $a_1=x+iy$ y $a_1^*=x-iy$ es el complejo conjugado, el operador $\dagger$ da el transpuesto conjugado de un vector o matriz.\\
+el operador $\dagger$ da el transpuesto conjugado de un vector o matriz.\\
 %\subsubsection{BraKet}
 Se define al braket como el producto interno o producto escalar en el espacio de Hilbert.
 \begin{equation}
-\langle b | a\rangle=a_1b_1^*+a_2b_2^*=\langle a | b\rangle^*\in \mathbb{C}
-\end{equation}.
+\langle b | a\rangle=a_1b_1^*+a_2b_2^*=\langle a | b\rangle^*\in \mathbb{C} .
+\end{equation}
 El ketbra o producto abierto se define como 
 \begin{equation}
 |a\rangle\langle b|=
 	\begin{pmatrix}
 		a_1 b_1^*& a_1 b_2^*\\
 		a_2 b_1^*& a_2 b_2^*\\
-	\end{pmatrix}
+	\end{pmatrix}.
 \end{equation}
 \subsection{Representación de Qubit}
 La representación de un qubit viene dada naturalmente por los spinores utilizados para describir el experimento de Stern-Gerlach en el que se miden el spin de átomos de plata. Estos spinores se definen como 
