@@ -237,13 +237,13 @@ que son los eigen-vectores de la matriz de Pauli x $\sigma_x$, y como se ha de e
 \end{equation}
 \subsection{Regla de Born}
 La probabilidad que el estado $|\psi\rangle$ colapse durante una medición proyectiva en la base $\{|x\rangle, |x^+ \rangle \}$ al estado $|x\rangle$ está dada por
-\begin{equation}
+\begin{equation*}
 P(x)=|\langle x|\psi\rangle|^2,
-\end{equation}
+\end{equation*}
 y del hecho que se está trabajando con estados normalizados se tiene, como es de esperarse que
-\begin{equation}
+\begin{equation*}
 \sum_i P(x_i)=1.
-\end{equation}
+\end{equation*}
 Para ilustrar esto se presentan algunos ejemplos:\\
 a. El estado $|\psi\rangle=\frac{1}{\sqrt{3}}(|0\rangle +\sqrt{2}|1\rangle)$ es medido en la base $\{|0\rangle,   |1\rangle \}$ calcule las probabilidades correspondientes:
 \begin{equation*}
@@ -295,14 +295,14 @@ Para ser más ilustrativa la deducción y al mismo tiempo más pictórica se con
 \caption{Correlación de espín para un estado \textit{spin-singlet}}
 \label{fig::spin_correlation_spin_singlet}
 \end{figure}
-Para un sistema de una partícula de spin $\frac{1}{2}$ se tienen los  eigenkets(vectores propios) $S_x$ y $S_z$ están relacionados de la siguiente manera \footnote{ver\ref{sec::appendix} o \cite{Sakurai}}
-\begin{equation}
+Para un sistema de una partícula de espín $\frac{1}{2}$ se tienen los  eigenkets(también llamados \textit{vectores propios}) $S_x$ y $S_z$ están relacionados de la siguiente manera \footnote{ver \cite{Sakurai}}
+\begin{equation*}
 |\mathbf{\hat{x}\pm}\rangle=\frac{1}{\sqrt{2}}\big (|\mathbf{\hat{z}+}\rangle \pm |\mathbf{\hat{z}-}\rangle  \big),\,\,\,\,\,|\mathbf{\hat{z}\pm}\rangle=\frac{1}{\sqrt{2}}\big (|\mathbf{\hat{x}+}\rangle \pm |\mathbf{\hat{x}-}\rangle  \big).
-\end{equation}
+\end{equation*}
 Continuando la discusión con el sistema compuesto, se puede reescribir el estado de spin-singlet \ref{eq::singlet_state} escogiendo al eje $x$ cómo eje de cuantización de la siguiente manera:
-\begin{equation}
+\begin{equation*}
 |\text{\textit{spin-singlet}}\rangle=\frac{1}{\sqrt{2}}\big( |\mathbf{\hat{x}}-;\mathbf{\hat{x}}+\rangle -|\mathbf{\hat{x}}+;\mathbf{\hat{x}}-\rangle  \big).
-\end{equation}
+\end{equation*}
 está expresión es muy parecida a \ref{eq::singlet_state} y aparte del signo(que es una convención) se pudo esperaba tener una expresión análoga debido al hecho que para los estados de \textit{spin-singlet} no hay preferencia de dirección espacial. Suponiendo ahora que el observador A puede elegir medir $S_z$ or $S_x$ para la partícula 1 al cambiar la orientación de su dispositivo para medir el spin, mientras que el observador B se concentra en una sola dirección $S_x$ para la partícula 2. Si A mide $S_z$ y obtiene un valor positivo B tiene claramente $50\%-50\%$ chance de hallar $S_x\, +$ o $S_x\,-$ aunque se sepa que $S_z$ es con certeza negativo, su componente $S_x$ está totalmente indeterminado. Por el otro lado, suponiendo que A escoge medir $S_x$ entonces cuando mida un valor positivo para la partícula 1 el observador B tendrá con certeza un valor negativo para $S_x$. La última opción en la que el observador A prefiere no hacer ninguna medición sobre la partícula 1 entonces es claro que el observador B tiene de nuevo $50\%-50\%$ chance de medir $S_x\,+$ o $S_x\,-$, para resumirlo
 \begin{enumerate}
 \item Si A mide $S_z$ y B mide $S_x$, entonces hay una correlación completamente aleatoria entre las dos mediciones. 
