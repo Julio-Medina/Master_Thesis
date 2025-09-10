@@ -364,41 +364,41 @@ $N_8$ & $(\mathbf{\hat{a}}-,\, \mathbf{\hat{b}}-,\,\mathbf{\hat{c}}-)$ & $(\math
     \label{tab:three_direction_correlations}
 \end{table}
 La probabilidad está dada por 
-\begin{equation}
-P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+) = \frac{N_3+N_4}{\sum_{i=1}^{8} N_i} 
-\end{equation}
+\begin{equation*}
+P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+) = \frac{N_3+N_4}{\sum_{i=1}^{8} N_i} .
+\end{equation*}
 De manera análoga se tiene que 
-\begin{equation}
-P(\mathbf{\hat{a}}+;\, \mathbf{\hat{c}},+) = \frac{N_2+N_4}{\sum_{i=1}^{8} N_i} 
-\end{equation}
+\begin{equation*}
+P(\mathbf{\hat{a}}+;\, \mathbf{\hat{c}},+) = \frac{N_2+N_4}{\sum_{i=1}^{8} N_i} ,
+\end{equation*}
 y
-\begin{equation}
-P(\mathbf{\hat{c}}+;\, \mathbf{\hat{b}},+) = \frac{N_3+N_7}{\sum_{i=1}^{8} N_i} 
-\end{equation}
-la condición de positividad del número de poblaciones en cada tipo \ref{eq::positivity_condition} da cómo resultado
+\begin{equation*}
+P(\mathbf{\hat{c}}+;\, \mathbf{\hat{b}},+) = \frac{N_3+N_7}{\sum_{i=1}^{8} N_i} ,
+\end{equation*}
+la condición de positividad del número de poblaciones en cada tipo \ref{eq::positivity_condition} da como resultado
 \begin{equation}\label{eq::Bell_inequality}
 P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+) \geq P(\mathbf{\hat{a}}+;\, \mathbf{\hat{c}},+) + P(\mathbf{\hat{c}}+;\, \mathbf{\hat{b}},+)  
 \end{equation}
-Está es la \textbf{desigualdad de Bell}, que es una consecuencia del principio de localidad de Einstein.
+Esta es la \textit{desigualdad de Bell}, que es una consecuencia del principio de localidad de Einstein.
 
 \subsection{Desigualdad de Bell y Mecánica Cuántica}
-En el punto de vista de la Mecánica Cuántica no se habla de una fracción de pares de partículas por ejemplo $\frac{N_3}{\sum_{i=1}^{8} N_i}$ pertenecientes al tipo 3, en lugar de esto se caracteriza todos los sistemas de \textit{spin-singlet} por el mismo ket \ref{eq::singlet_state}, en este sentido se tiene un ensamble puro(ver Sakurai \cite{Sakurai}). Usando el ket \ref{eq::singlet_state} y las reglas de la mecánica cuántica se pueden calcular las probabilidades de la desigualdad de Bell \ref{eq::Bell_inequality} sin ninguna ambigüedad.\\
+En el punto de vista de la Mecánica Cuántica no se habla de una fracción de pares de partículas por ejemplo $\frac{N_3}{\sum_{i=1}^{8} N_i}$ pertenecientes al tipo 3, en lugar de esto se caracterizan todos los sistemas de estado espín singlete(\textit{spin-singlet}) por el mismo ket \ref{eq::singlet_state}, en este sentido se tiene un ensamble puro(ver Sakurai \cite{Sakurai}). Usando el ket \ref{eq::singlet_state} y las reglas de la mecánica cuántica se pueden calcular las probabilidades de la desigualdad de Bell \ref{eq::Bell_inequality} sin ninguna ambigüedad.\\
 
 Primero se evalúa $P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+)$. Suponiendo que el observador A mide $\mathbf{\hat{S}} \cdot \mathbf{\hat{a}}$ y haya un valor $+$; debido a la correlación perfecta por la conservación del momento angular discutida previamente, la medición del observador B para $\mathbf{\hat{S}} \cdot \mathbf{\hat{b}}$ va a resultar en $-$ con certeza. Pero para calcular $P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+)$ se debe considerar un nuevo eje de cuantización para $\mathbf{\hat{b}}$ con un ángulo $\theta_{ab}$ con respecto a $\mathbf{\hat{a}}$, ver figura \ref{fig::P_evaluation}. 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.24]{./evaluation_P.png} 
 \end{center} 
-\caption{Evaluación de $P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+)$}
+\caption{Evaluación de $P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+)$}.
 \label{fig::P_evaluation}
 \end{figure}
-De acuerdo al formalismo de la formulación matricial de la mecánica cuántica(ver \cite{Sakurai}), la probabilidad que la medición de $\mathbf{S}_2\cdot \mathbf{\hat{b}}$ de como resultado $+$ cuando se sabe que la partícula 2 es un estado propio(\textit{eigenvalue}) de $\mathbf{S}_2\cdot \mathbf{\hat{a}}$ con valor propio negativo está dado por
-\begin{equation}
-\cos^2\Bigg[\frac{\pi-\theta_{ab}}{2}\Bigg]=\sin^2\bigg(\frac{\theta_{ab}}{2}\bigg)
-\end{equation}
+De acuerdo al formalismo de la formulación matricial de la mecánica cuántica(ver \cite{Sakurai}), la probabilidad que la medición de $\mathbf{S}_2\cdot \mathbf{\hat{b}}$ dé como resultado $+$ cuando se sabe que la partícula 2 es un estado propio(\textit{eigen vector}) de $\mathbf{S}_2\cdot \mathbf{\hat{a}}$ con valor propio negativo, está dada por
+\begin{equation*}
+\cos^2\Bigg[\frac{\pi-\theta_{ab}}{2}\Bigg]=\sin^2\bigg(\frac{\theta_{ab}}{2}\bigg).
+\end{equation*}
 Cómo resultado se obtiene que 
 \begin{equation}\label{eq::P_ab_probability}
-P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+)=\frac{1}{2}\sin^2\bigg(\frac{\theta_{ab}}{2}\bigg)
+P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+)=\frac{1}{2}\sin^2\bigg(\frac{\theta_{ab}}{2}\bigg),
 \end{equation}
 donde el factor $\frac{1}{2}$ surge de la probabilidad inicial de obtener $\mathbf{S}_1\cdot \mathbf{\hat{a}}$ con valor $+$. Usando la expresión \ref{eq::P_ab_probability} y su generalización para los otros 2 términos de \ref{eq::Bell_inequality} se puede reescribir la desigualdad de Bell cómo:
 \begin{equation}\label{eq::Bell_inequality_2}
