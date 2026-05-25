@@ -423,11 +423,11 @@ Con esto se puede evidenciar claramente que las predicciones de la mecánica cu�
 
 \subsection{Transformada Cuántica de Fourier}
 \subsubsection{Introducción}
-Como se mencionó antes la transformada de Fourier tienen mucha aplicaciones en toda la física y también tiene aplicaciones importantes en la computación clásica en áreas como el procesamiento de señales, algoritmos de compresión de datos y teoría de complejidad de algoritmos. La transformada de Fourier Cuántica es la implementación cuántica de la transformada discreta de Fourier sobre las amplitudes de una función de onda\footnote{Una función de onda que evoluciona de acuerdo a la ecuación de Schr\"{o}dinger}, es una parte fundamental de varios algoritmos cuánticos  como el algoritmo de factorización de Shor y la estimación de fase cuántica.\\
+Como se mencionó antes la transformada de Fourier tiene muchas aplicaciones en toda la física y también tiene aplicaciones importantes en la computación clásica en áreas como el procesamiento de señales, algoritmos de compresión de datos y teoría de complejidad de algoritmos. La transformada de Fourier Cuántica es la implementación cuántica de la transformada discreta de Fourier sobre las amplitudes de una función de onda\footnote{Una función de onda que evoluciona de acuerdo a la ecuación de Schr\"{o}dinger}, es una parte fundamental de varios algoritmos cuánticos  como el algoritmo de factorización de Shor y la estimación de fase cuántica.\\
 La transformada de Fourier cuántica actúa sobre un vector $(x_0, \hdots, x_{N-1})$ y lo mapea o transforma o otro vector
 $(y_0, \hdots, y_{N-1})$ por medio de la siguiente fórmula
 \begin{equation}
-y_{k}=\frac{1}{\sqrt{N}}\sum_{j=0}^{N-1}x_j \omega_{N}^{jk}
+y_{k}=\frac{1}{\sqrt{N}}\sum_{j=0}^{N-1}x_j \omega_{N}^{jk},
 \end{equation}
 donde 
 \begin{equation}\label{eq::omega_definition}
@@ -436,23 +436,23 @@ donde
 
 De manera análoga la transformada cuántica de Fourier actúa sobre un estado cuántico\footnote{Un vector en un espacio de Hilbert, finito o infinito} 
 \begin{equation}
-|X\rangle=\sum_{j=0}^{N-1} x_{j}|j\rangle
+|X\rangle=\sum_{j=0}^{N-1} x_{j}|j\rangle,
 \end{equation}
 y lo mapea a un estado 
 \begin{equation}\label{eq::QFT_general}
-|Y\rangle=\sum_{k=0}^{N-1} y_{k}|k\rangle
+|Y\rangle=\sum_{k=0}^{N-1} y_{k}|k\rangle,
 \end{equation}
 conforme a la expresión
 \begin{equation}
-y_k=\frac{1}{\sqrt{N}}\sum_{j=0}^{N-1}x_j\omega_{N}^{jk}
+y_k=\frac{1}{\sqrt{N}}\sum_{j=0}^{N-1}x_j\omega_{N}^{jk},
 \end{equation}
 donde $\omega_{N}^{jk}$ está definido en \ref{eq::omega_definition}, es importante notar que sólo las amplitudes del estado son afectadas por está transformación, esto puede expresarse también como el mapeo
 \begin{equation}
-|j\rangle \rightarrow \frac{1}{\sqrt{N}}\sum^{N-1}_{k=0}\omega_N^{jk}|k\rangle
+|j\rangle \rightarrow \frac{1}{\sqrt{N}}\sum^{N-1}_{k=0}\omega_N^{jk}|k\rangle,
 \end{equation}
 o por la matriz unitaria
 \begin{equation}
-U_{\text{QFT}}=\frac{1}{\sqrt{N}}\sum_{j=0}^{N-1}\sum_{k=0}^{N-1}\omega_{N}^{jk}|k\rangle\langle j|
+U_{\text{QFT}}=\frac{1}{\sqrt{N}}\sum_{j=0}^{N-1}\sum_{k=0}^{N-1}\omega_{N}^{jk}|k\rangle\langle j|.
 \end{equation}
 \subsubsection{Intuición detrás de la TCF(QFT)}
 La intuición detrás de la Transformada Cuántica de Fourier(QFT-\textit{Quantum Fourier Transform}) viene del hecho que el efecto que tiene al transformar a un estado cuántico basicamente se está cambiando de la base computacional Z  a la base de Fourier. La compuerta de Hadamard(\cite{Medina}, \cite{Qiskit}, \cite{Nielsen}) es la transformada de Fourier cuántica para un solo qubit, transforma de base computacional Z $\{|0\rangle, |1\rangle\}$ a la base X $\{|+\rangle, |-\rangle \}$. De la misma manera todos los estados de partículas múltiples es decir estados de varios qubit en la base computacional tiene una representación en la base de Fourier. La TCF simplemente es la función que transforma entre estas bases.
