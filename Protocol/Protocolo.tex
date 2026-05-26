@@ -493,30 +493,30 @@ H\vert\psi\rangle&=\frac{1}{\sqrt{2}}(\alpha+\beta)|0\rangle + \frac{1}{\sqrt{2}
 La ejemplo anterior no deja del todo claro el como se aplica una transformada cuántica de Fourier para N más grandes. Aquí se toma a $N=2^n$, es decir $U_{\text{QFT}_N}$ actuando en el estado $|x\rangle=|x_1\hdots x_n\rangle$\footnote{Se hace uso de la notación $|x_1\hdots x_n\rangle=|x_1\rangle\otimes\hdots\otimes |x_n\rangle$ } donde $x_1$ es el bit más significativo. Con esto se aplica la expresión \ref{eq::QFT_general} para obtener
 \begin{equation}\label{eq::QFT}
 \begin{aligned}
-U_{\text{QFT}_N}|x\rangle &=\frac{1}{\sqrt{N}}\sum_{y=0}^{N-1}\omega_N^{xy}|y\rangle\\
-&=\frac{1}{\sqrt{N}}\sum_{y=0}^{N-1} e^{2\pi i xy/2^{n}}|y\rangle
+U_{\text{QFT}_N}|x\rangle &=\frac{1}{\sqrt{N}}\sum_{y=0}^{N-1}\omega_N^{xy}|y\rangle\\,
+&=\frac{1}{\sqrt{N}}\sum_{y=0}^{N-1} e^{2\pi i xy/2^{n}}|y\rangle,
 \end{aligned}
 \end{equation}
 reescribiendo $y$ en notación fraccional binaria $y=y_1\hdots y_n$ con
 \begin{equation*}
-\frac{y}{2^n}=\sum_{k=1}^{n}\frac{y_k}{2^k}
+\frac{y}{2^n}=\sum_{k=1}^{n}\frac{y_k}{2^k},
 \end{equation*}
 donde $y_k \in\{ 0, 1 \}$, sustituyendo en \ref{eq::QFT} se obtiene
 \begin{equation}\label{eq::QFT_2}
 \begin{aligned}
-U_{\text{QFT}_N}|x\rangle &=\frac{1}{\sqrt{N}}\sum_{y=0}^{N-1}e^{2\pi i(\sum_{k=1}^n y_k/2^k)}|y_1 \hdots y_n\rangle\\
-&=\frac{1}{\sqrt{N}}\sum_{y=0}^{N-1} \prod_{k=1}^n e^{2\pi i x y_k/2^{k}}|y_1 \hdots y_n\rangle
+U_{\text{QFT}_N}|x\rangle &=\frac{1}{\sqrt{N}}\sum_{y=0}^{N-1}e^{2\pi i(\sum_{k=1}^n y_k/2^k)}|y_1 \hdots y_n\rangle,\\
+&=\frac{1}{\sqrt{N}}\sum_{y=0}^{N-1} \prod_{k=1}^n e^{2\pi i x y_k/2^{k}}|y_1 \hdots y_n\rangle.
 \end{aligned}
 \end{equation}
 donde se ha expresado al exponencial de una suma como un producto de exponenciales. Re-arreglando las sumas y productos, y expandiendo $\sum_{y=0}^{N-1}=\sum_{y_1=0}^1 \sum_{y_2=0}^1 \hdots \sum_{y_n=0}^1$, se obtiene
 \begin{equation}\label{eq::QFT_3}
 \begin{aligned}
-U_{\text{QFT}_N}|x\rangle &=\frac{1}{\sqrt{N}} \bigotimes_{k=1}^n \bigg(|0\rangle + e^{2\pi i x/2^k}|1\rangle \bigg)  \\
-&=\frac{1}{\sqrt{N}}\bigg(|0\rangle + e^{\frac{2\pi i}{2} x} |1\rangle \bigg)\otimes\bigg(|0\rangle + e^{\frac{2\pi i}{2^2} x} |1\rangle \bigg)\otimes \hdots \otimes \bigg(|0\rangle + e^{\frac{2\pi i}{2^{n}} x} |1\rangle \bigg)
+U_{\text{QFT}_N}|x\rangle &=\frac{1}{\sqrt{N}} \bigotimes_{k=1}^n \bigg(|0\rangle + e^{2\pi i x/2^k}|1\rangle \bigg),  \\
+&=\frac{1}{\sqrt{N}}\bigg(|0\rangle + e^{\frac{2\pi i}{2} x} |1\rangle \bigg)\otimes\bigg(|0\rangle + e^{\frac{2\pi i}{2^2} x} |1\rangle \bigg)\otimes \hdots \otimes \bigg(|0\rangle + e^{\frac{2\pi i}{2^{n}} x} |1\rangle \bigg).
 \end{aligned}
 \end{equation}
 \section{Metodología}
-La metodología a usar es un abordaje híbrido en el que se estudian a fondo los temas teóricos y se van aplicando a una implementación básica en \textit{Qiskit}, estás implementaciones se van a ir versionando en un repositorio de \texttt{GitHub} para poder reproducir todos los resultados.\\
+La metodología a usar es un abordaje híbrido en el que se estudian a fondo los temas teóricos y se van aplicando a una implementación básica en \textit{Qiskit}, estas implementaciones se van a ir versionando en un repositorio de \texttt{GitHub} para poder reproducir todos los resultados.\\
 
 Los resultados teóricos se desarrollan desde principios fundamentales y se dejará constancia de las deducciones realizadas, los algoritmos se van a ir probando por medio de la interfaz que ofrece \textit{IBM} para utilizar ordenares cuánticos reales, esto para cuantificar los efectos de los errores en los algoritmos desarrollados. También se investigará cómo el \textit{Quantum Machine Learning} puede utilizarse para potenciar al \textit{Machine Learning} clásico, esto servirá como base para escribir una sección en un artículo sobre un modelo de \textit{Machine Learning} llamado SeismicNet. SeismicNet es un modelo red neuronal profunda para el análisis automático de señales sísmicas.
 

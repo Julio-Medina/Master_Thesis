@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.16)  24 MAY 2026 22:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.16)  25 MAY 2026 21:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -406,10 +406,6 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 (./Protocolo.aux
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
-
-
-LaTeX Warning: Label `Qiskit' multiply defined.
-
 )
 \openout1 = `Protocolo.aux'.
 
@@ -431,7 +427,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count307
 \scratchdimen=\dimen173
@@ -602,6 +599,11 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 471.
 Missing character: There is no ˆ in font cmr10!
 Missing character: There is no ˆ in font cmr10!
 [14]
+Overfull \hbox (0.7666pt too wide) detected at line 517
+[][][][]
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 519--520
 
  []
@@ -629,16 +631,12 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 562.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 562.
 Package rerunfilecheck Info: File `Protocolo.out' has not changed.
 (rerunfilecheck)             Checksum: F40DC480F023707EAA45B4AECAF5E79D;1598.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 562.
  ) 
 Here is how much of TeX's memory you used:
  9293 strings out of 481239
  137549 string characters out of 5920377
- 432975 words of memory out of 5000000
+ 432936 words of memory out of 5000000
  24246 multiletter control sequences out of 15000+600000
  545521 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -666,7 +664,7 @@ public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 ts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.
 pfb>
-Output written on Protocolo.pdf (16 pages, 348303 bytes).
+Output written on Protocolo.pdf (16 pages, 348322 bytes).
 PDF statistics:
  424 PDF objects out of 1000 (max. 8388607)
  376 compressed objects within 4 object streams
