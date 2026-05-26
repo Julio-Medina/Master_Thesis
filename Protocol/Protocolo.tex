@@ -485,7 +485,7 @@ H=\frac{1}{\sqrt{2}}
 al estado $\vert \psi\rangle$, 
 \begin{equation}
 \begin{aligned}
-H\vert\psi\rangle&=\frac{1}{\sqrt{2}}(\alpha+\beta)|0\rangle + \frac{1}{\sqrt{2}}(\alpha-\beta)|1\rangle\equiv \tilde{\alpha}\vert 0\rangle+ \tilde{\beta}\vert 1\rangle\\
+H\vert\psi\rangle&=\frac{1}{\sqrt{2}}(\alpha+\beta)|0\rangle + \frac{1}{\sqrt{2}}(\alpha-\beta)|1\rangle\equiv \tilde{\alpha}\vert 0\rangle+ \tilde{\beta}\vert 1\rangle,\\
 &=\alpha \vert + \rangle +\beta \vert - \rangle.
 \end{aligned}
 \end{equation}
@@ -493,7 +493,7 @@ H\vert\psi\rangle&=\frac{1}{\sqrt{2}}(\alpha+\beta)|0\rangle + \frac{1}{\sqrt{2}
 La ejemplo anterior no deja del todo claro el como se aplica una transformada cuántica de Fourier para N más grandes. Aquí se toma a $N=2^n$, es decir $U_{\text{QFT}_N}$ actuando en el estado $|x\rangle=|x_1\hdots x_n\rangle$\footnote{Se hace uso de la notación $|x_1\hdots x_n\rangle=|x_1\rangle\otimes\hdots\otimes |x_n\rangle$ } donde $x_1$ es el bit más significativo. Con esto se aplica la expresión \ref{eq::QFT_general} para obtener
 \begin{equation}\label{eq::QFT}
 \begin{aligned}
-U_{\text{QFT}_N}|x\rangle &=\frac{1}{\sqrt{N}}\sum_{y=0}^{N-1}\omega_N^{xy}|y\rangle\\,
+U_{\text{QFT}_N}|x\rangle &=\frac{1}{\sqrt{N}}\sum_{y=0}^{N-1}\omega_N^{xy}|y\rangle,\\
 &=\frac{1}{\sqrt{N}}\sum_{y=0}^{N-1} e^{2\pi i xy/2^{n}}|y\rangle,
 \end{aligned}
 \end{equation}
@@ -508,13 +508,14 @@ U_{\text{QFT}_N}|x\rangle &=\frac{1}{\sqrt{N}}\sum_{y=0}^{N-1}e^{2\pi i(\sum_{k=
 &=\frac{1}{\sqrt{N}}\sum_{y=0}^{N-1} \prod_{k=1}^n e^{2\pi i x y_k/2^{k}}|y_1 \hdots y_n\rangle.
 \end{aligned}
 \end{equation}
-donde se ha expresado al exponencial de una suma como un producto de exponenciales. Re-arreglando las sumas y productos, y expandiendo $\sum_{y=0}^{N-1}=\sum_{y_1=0}^1 \sum_{y_2=0}^1 \hdots \sum_{y_n=0}^1$, se obtiene
+Se ha expresado al exponencial de una suma como un producto de exponenciales. Rearreglando las sumas, los productos y expandiendo $\sum_{y=0}^{N-1}=\sum_{y_1=0}^1 \sum_{y_2=0}^1 \hdots \sum_{y_n=0}^1$, se obtiene
 \begin{equation}\label{eq::QFT_3}
 \begin{aligned}
 U_{\text{QFT}_N}|x\rangle &=\frac{1}{\sqrt{N}} \bigotimes_{k=1}^n \bigg(|0\rangle + e^{2\pi i x/2^k}|1\rangle \bigg),  \\
 &=\frac{1}{\sqrt{N}}\bigg(|0\rangle + e^{\frac{2\pi i}{2} x} |1\rangle \bigg)\otimes\bigg(|0\rangle + e^{\frac{2\pi i}{2^2} x} |1\rangle \bigg)\otimes \hdots \otimes \bigg(|0\rangle + e^{\frac{2\pi i}{2^{n}} x} |1\rangle \bigg).
 \end{aligned}
 \end{equation}
+Esta es la expresión final para la Transformada Cuántica de Fourier, la cual es fundamental para desarrollar el algoritmo de Shor \cite{Shor} y otros algoritmos cuánticos de usos prácticos.
 \section{Metodología}
 La metodología a usar es un abordaje híbrido en el que se estudian a fondo los temas teóricos y se van aplicando a una implementación básica en \textit{Qiskit}, estas implementaciones se van a ir versionando en un repositorio de \texttt{GitHub} para poder reproducir todos los resultados.\\
 
