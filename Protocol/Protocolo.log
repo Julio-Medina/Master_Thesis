@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.16)  26 MAY 2026 21:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.16)  26 MAY 2026 21:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -514,7 +514,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 281--284
 
  []
 
-<./spin_correlation_spin_singlet.png, id=171, 1327.96124pt x 213.79875pt>
+[6]
+<./spin_correlation_spin_singlet.png, id=180, 1327.96124pt x 213.79875pt>
 File: ./spin_correlation_spin_singlet.png Graphic file (type png)
 <use ./spin_correlation_spin_singlet.png>
 Package pdftex.def Info: ./spin_correlation_spin_singlet.png  used on input lin
@@ -525,8 +526,8 @@ Overfull \hbox (13.55432pt too wide) in paragraph at lines 293--294
  [] 
  []
 
-[6] [7pdfTeX warning (ext4): destination with the same identifier (name{figure.
-1}) has been already used, duplicate ignored
+[7pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -556,9 +557,9 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.403 \end{equation}
-                    ] [12pdfTeX warning (ext4): destination with the same ident
-ifier (name{figure.2}) has been already used, duplicate ignored
+l.399 \end{equation*}
+                     ] [12pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -570,13 +571,6 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 467.
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 467.
 
-
-LaTeX Warning: Command \textbullet invalid in math mode on input line 467.
-
-
-LaTeX Warning: Command \textbullet invalid in math mode on input line 467.
-
-Missing character: There is no ˆ in font cmr10!
 Missing character: There is no ˆ in font cmr10!
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 471.
@@ -584,13 +578,6 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 471.
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 471.
 
-
-LaTeX Warning: Command \textbullet invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textbullet invalid in math mode on input line 471.
-
-Missing character: There is no ˆ in font cmr10!
 Missing character: There is no ˆ in font cmr10!
 [14]
 Overfull \hbox (34.2405pt too wide) in paragraph at lines 510--512
@@ -664,7 +651,7 @@ public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 ts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.
 pfb>
-Output written on Protocolo.pdf (16 pages, 348854 bytes).
+Output written on Protocolo.pdf (16 pages, 348930 bytes).
 PDF statistics:
  425 PDF objects out of 1000 (max. 8388607)
  377 compressed objects within 4 object streams
